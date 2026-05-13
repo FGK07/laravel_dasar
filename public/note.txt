@@ -1,0 +1,11 @@
+maintenance mode
+-> php artisan down
+
+nanti akan dibuatkan file down di storage/framework/down
+
+live mode
+-> php artisan up
+
+mengakses aplikasi ketika down
+-> php artisan down --secret="yoursecretkey"
+->http://127.0.0.1:8000/secretkey

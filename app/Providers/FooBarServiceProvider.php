@@ -10,12 +10,18 @@ use Illuminate\Support\ServiceProvider;
 
 class FooBarServiceProvider extends ServiceProvider implements DeferrableProvider
 {
-    // kasus sederhana pakai property singleton untuk binding
+    /**
+     *kasus sederhana pakai property singleton untuk binding->
+     * kalau ada yang butuh hello service kembalikan helloServiceIndonesia
+     * sebagai singletons
+     */
+    
     public array $singletons = [
         HelloService::class=>HelloServiceIndonesia::class
     ];
     /**
      * Register services.
+     * 
      */
     public function register(): void
     {
